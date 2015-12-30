@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+<title>Login Application in JSF 2</title>
+<style>
+.container {
+  border: 1px solid #CCC;
+  width: 420px;
+  margin: 0px auto;
+  margin-top: 150px;
+  padding: 15px;
+  border-radius: 5px;
+}
+label {
+  display: block;
+  font-weight: bold;
+  color: #808080;
+}
+
+input {
+  width: 95%;
+  padding: 8px 12px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  margin: 10px 0px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: green;
+  color: white;
+}
+}
+</style>       
+</h:head>
+<h:body>
+<div class="container">
+		<h:form id="loginForm">
+			<h:outputLabel value="User Name:" />
+			<h:inputText value="#{userLogin.username}" required="true"/> <br />
+			<h:outputLabel value="Password:" />
+			<h:inputSecret value="#{userLogin.password}" required="true"></h:inputSecret><br/>
+			<h:commandButton value="Submit" action="#{userLogin.login}"></h:commandButton>
+		</h:form>
+</div>
+
+</h:body>
+</html>
